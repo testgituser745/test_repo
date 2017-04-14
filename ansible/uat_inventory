@@ -1,0 +1,20 @@
+[all:children]
+mysql
+webserver
+loadbalance
+
+[all:vars]
+ansible_ssh_pass = OpenStack123
+ansible_ssh_user = root
+
+[mysql]
+mysql-node3 ansible_ssh_host=172.31.100.46 ansible_ssh_port=22  
+mysql-node2 ansible_ssh_host=172.31.100.44 ansible_ssh_port=22   
+mysql-node1 ansible_ssh_host=172.31.100.45 ansible_ssh_port=22   
+mysql ansible_ssh_host=172.31.100.43 ansible_ssh_port=22
+
+[loadbalance]
+loadbalancer ansible_ssh_host=172.31.100.41 ansible_ssh_port=22   
+
+[webserver]
+web ansible_ssh_host=172.31.100.42 ansible_ssh_port=22   
