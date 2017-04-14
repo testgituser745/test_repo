@@ -1,0 +1,52 @@
+---
+
+ - name: install usefull modules
+   yum:
+     name: "{{ item  }}"
+     state: present 
+   with_items:
+   - gcc
+   - git
+   - python-devel
+   - openssl-devel
+   - python-pip
+   - wget 
+   - bzip2 
+   - mariadb-server 
+   - php 
+   - php-mysql 
+   - php-dom 
+   - php-gd 
+   - php-mbstring 
+   - php-posix 
+   - php-xmlwriter 
+   - php-zip
+
+ - name: start firewall   
+   service:
+     name: firewalld
+     state: running
+     enabled: true
+ 
+ - name: start firewall   
+   firewalld:
+     zone: public
+     service: http
+     permanent: true
+     immediate: true
+     state: enabled
+ 
+
+ - name: start firewall   
+   firewalld:
+     zone: public
+     service: https
+     permanent: true
+     immediate: true
+     state: enabled
+   
+
+
+     
+   
+  

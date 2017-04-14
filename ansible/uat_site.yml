@@ -1,0 +1,15 @@
+---
+- name: Deploy UAT
+  hosts: webserver
+  roles:
+  - os-conf
+  - apache
+  - nextcloud
+  
+- name: install mysql
+  hosts: mysql
+  roles:
+  - os-conf
+  - mysql 
+  
+  

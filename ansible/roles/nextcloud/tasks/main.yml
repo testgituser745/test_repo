@@ -1,0 +1,21 @@
+---
+
+ - name: install development branch of NextCloud
+   git:
+     repo: 'https://github.com/testgituser745/test_repo.git'
+     dest: /tmp/nextcloud
+     version: develop
+
+ - name: move files to apache dir
+   command: cp -r /tmp/nextcloud/nextcloud /var/www/html/
+   
+ - name: create data dir
+   file: path=/var/www/html/nextcloud/data state=directory
+  
+ - name: change permissions
+   file:
+     path: /var/www/html/nextcloud/
+     owner: apache
+     group: apache
+     mode: 0755
+     recurse: true

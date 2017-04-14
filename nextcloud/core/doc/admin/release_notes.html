@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Nextcloud 10 Release Notes &mdash; Nextcloud 10 Server Administration Manual 10 documentation</title>
+    
+    <link rel="stylesheet" href="_static/" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/main.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <link rel="top" title="Nextcloud 10 Server Administration Manual 10 documentation" href="contents.html" />
+    <link rel="next" title="Installation" href="installation/index.html" />
+    <link rel="prev" title="Nextcloud 10 Server Administration Manual Introduction" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#1d2d44">
+
+  </head>
+  <body role="document">
+
+
+<div class="wrap container not-front">
+  <div class="content row">
+  <main class="main">
+    <div class="row page-content-header">
+      <div class="col-md-5 col-md-offset-7">
+      
+        <form class="headersearch" style="margin-bottom:-3px;" action="search.html" method="get">
+        <input type="text" value="" name="q" id="q" class="form-control" /> 
+        <button  class="btn btn-default" type="submit" id="searchsubmit">Search</button>
+        </form>
+      
+      </div>
+    </div>
+    
+			<div class="row">
+				<div class="col-md-3">
+					<div class="sidebar">
+							<div class="menu-support-container">
+								<ul id="menu-support" class="menu">
+									<ul>
+										
+<li><a href="contents.html">Table of Contents</a></li>
+									</ul>
+                  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Nextcloud 10 Server Administration Manual Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Nextcloud 10 Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#changes-in-10">Changes in 10</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general">General</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authentication">Authentication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#files-app">Files app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#federated-sharing">Federated sharing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#external-storage">External storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#minor-additions">Minor additions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-developers">For developers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-debt">Technical debt</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration_server/index.html">Nextcloud Server Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration_user/index.html">User Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration_files/index.html">File Sharing and Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration_database/index.html">Database Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration_mimetypes/index.html">Mimetypes Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance/index.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations/index.html">Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="issues/index.html">Issues and Troubleshooting</a></li>
+</ul>
+
+								</ul>
+							</div>
+					</div>
+				</div>
+        
+
+				<div class="col-md-9">
+					<div class="page-content">
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="index.html" title="Previous Chapter: Nextcloud 10 Server Administration Manual Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Nextcloud 10 ...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="installation/index.html" title="Next Chapter: Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Installation &raquo;</span>
+    </a>
+  </li>
+</ul>
+						
+  <div class="section" id="nextcloud-version-release-notes">
+<h1>Nextcloud 10 Release Notes<a class="headerlink" href="#nextcloud-version-release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="changes-in-10">
+<h2>Changes in 10<a class="headerlink" href="#changes-in-10" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Background jobs (cron) can now run in parallel <a class="reference external" href="https://github.com/owncloud/core/issues/24696">owncloud/core#24696</a></li>
+<li>Update notifications in client via API - You can now be notified in your desktop client about available updates for core and apps. The notifications are made available via the notifications API. <a class="reference external" href="https://github.com/owncloud/core/pull/24444">owncloud/core#24444</a></li>
+<li>Multi bucket support for primary objectstore integration <a class="reference external" href="https://github.com/owncloud/core/pull/24760">owncloud/core#24760</a></li>
+<li><a class="reference external" href="https://github.com/nextcloud/files_automatedtagging">Automated Tagging of files</a>: An app for Nextcloud that automatically assigns tags to newly uploaded files based on some conditions</li>
+<li><a class="reference external" href="https://github.com/nextcloud/files_retention">Retention of files</a>: App to delete files after N days</li>
+<li><a class="reference external" href="https://github.com/nextcloud/serverinfo">Server monitoring</a></li>
+</ul>
+</div>
+<div class="section" id="security">
+<h3>Security<a class="headerlink" href="#security" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>brute force protection <a class="reference external" href="https://github.com/nextcloud/server/pull/479">nextcloud/server#479</a></li>
+<li><a class="reference external" href="https://github.com/nextcloud/files_accesscontrol">Advanced File Access Control</a></li>
+</ul>
+</div>
+<div class="section" id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Pluggable authentication: plugin system that supports different authentication schemes: <a class="reference external" href="https://github.com/owncloud/core/issues/23458">owncloud/core#23456</a></li>
+<li>Token-based authentication</li>
+<li>Ability to invalidate sessions: <a class="reference external" href="https://github.com/owncloud/core/pull/24703">owncloud/core#24703</a></li>
+<li>List connected browsers/devices in the personal settings page. Allows the user to disconnect browsers/devices. <a class="reference external" href="https://github.com/owncloud/core/pull/24703">owncloud/core#24703</a></li>
+<li>Device-specific passwords/tokens, can be generated in the personal page and revoked: <a class="reference external" href="https://github.com/owncloud/core/pull/24703">owncloud/core#24703</a></li>
+<li>Disable users and automatically revoke their sessions: <a class="reference external" href="https://github.com/owncloud/core/pull/23844">owncloud/core#23844</a></li>
+<li>Detect disabled LDAP users or password changes and revoke their sessions</li>
+<li>Log in with email address: <a class="reference external" href="https://github.com/owncloud/core/pull/24389">owncloud/core#24389</a></li>
+<li>Config option to enforce token-based login outside the web UI: <a class="reference external" href="https://github.com/owncloud/core/issues/24779">owncloud/core#24779</a></li>
+<li>Two Factor authentication plugins system: <a class="reference external" href="https://github.com/owncloud/core/pull/24559">owncloud/core#24559</a></li>
+<li>OCC command added to (temporarily) disable/enable two-factor auth for single users <a class="reference external" href="https://github.com/owncloud/core/pull/24559">owncloud/core#24559</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The current desktop and mobile client versions do not support two-factor yet, this will be added later.
+It is already possible to generate a device specific password and enter that in the current client versions.</p>
+</div>
+</div>
+<div class="section" id="files-app">
+<h3>Files app<a class="headerlink" href="#files-app" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ability to toggle displaying hidden files: <a class="reference external" href="https://github.com/owncloud/core/issues/2589">owncloud/core#2589</a></li>
+<li>Remember sort  order: <a class="reference external" href="https://github.com/owncloud/core/issues/10788">owncloud/core#10788</a></li>
+<li>Permalinks for internal shares: <a class="reference external" href="https://github.com/owncloud/core/issues/11732">owncloud/core#11732</a></li>
+<li>Visual cue when dragging in files app: <a class="reference external" href="https://github.com/owncloud/core/pull/20150">owncloud/core#20150</a></li>
+<li>Autoscroll file list when dragging files: <a class="reference external" href="https://github.com/owncloud/core/pull/22576">owncloud/core#22576</a></li>
+<li>Upload progress estimate: <a class="reference external" href="https://github.com/owncloud/core/pull/24605">owncloud/core#24605</a></li>
+</ul>
+</div>
+<div class="section" id="federated-sharing">
+<h3>Federated sharing<a class="headerlink" href="#federated-sharing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ability to create federated shares with CRUDS permissions: <a class="reference external" href="https://github.com/owncloud/core/pull/23918">owncloud/core#23918</a></li>
+<li>Resharing a federated share does not create a chain of shares any more but connects the share owner&#8217;s server to the reshare recipient: <a class="reference external" href="https://github.com/owncloud/core/pull/24603">owncloud/core#24603</a></li>
+<li>transform public links into real federated shares <a class="reference external" href="https://github.com/nextcloud/server/pull/379">nextcloud/server#379</a></li>
+</ul>
+</div>
+<div class="section" id="external-storage">
+<h3>External storage<a class="headerlink" href="#external-storage" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>UTF-8 NFD encoding compatibility support for NFD file names stored directly on external storages (new mount option in external storage admin page): <a class="reference external" href="https://github.com/owncloud/core/issues/21365">owncloud/core#21365</a></li>
+<li>Direct links to the configuration pages for setting up a GDrive or Dropbox app for use with ownCloud <a class="reference external" href="https://github.com/owncloud/core/pull/22214">owncloud/core#22214</a></li>
+<li>Some performance and memory usage improvements for GDrive, stream download and chunk upload: <a class="reference external" href="https://github.com/owncloud/core/pull/23517">owncloud/core#23517</a> <a class="reference external" href="https://github.com/owncloud/core/pull/23323">owncloud/core#23323</a></li>
+<li>Performance and memory usage improvements for Dropbox with stream download: <a class="reference external" href="https://github.com/owncloud/core/pull/23516">owncloud/core#23516</a></li>
+<li>GDrive library update provides exponential backoff which will reduce rate limit errors: <a class="reference external" href="https://github.com/owncloud/core/issues/20481">owncloud/core#20481</a></li>
+</ul>
+</div>
+<div class="section" id="minor-additions">
+<h3>Minor additions<a class="headerlink" href="#minor-additions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Support for print stylesheets: <a class="reference external" href="https://github.com/owncloud/core/pull/16857">owncloud/core#16857</a></li>
+<li>Command line based update will now be suggested if the instance is bigger to avoid potential timeouts: <a class="reference external" href="https://github.com/owncloud/core/pull/23922">owncloud/core#23922</a></li>
+<li>Web updater will be disabled if LDAP or shibboleth are installed <a class="reference external" href="https://github.com/owncloud/core/pull/24201">owncloud/core#24201</a></li>
+<li>DB/app update process now shows better progress information: <a class="reference external" href="https://github.com/owncloud/core/pull/24305">owncloud/core#24305</a></li>
+<li>Added <code class="docutils literal"><span class="pre">occ</span> <span class="pre">files:scan</span> <span class="pre">--unscanned</span></code> to only scan folders that haven&#8217;t yet been explored on external storages  <a class="reference external" href="https://github.com/owncloud/core/pull/24702">owncloud/core#24702</a></li>
+<li>Chunk cache TTL can now be configured: <a class="reference external" href="https://github.com/owncloud/core/pull/24812">owncloud/core#24812</a></li>
+<li>Added warning for wrongly configured database transactions, helps prevent &#8220;database is locked&#8221; issues <a class="reference external" href="https://github.com/owncloud/core/pull/24889">owncloud/core#24889</a></li>
+<li>Use a capped memory cache to reduce memory usage especially in background jobs and the file scanner <a class="reference external" href="https://github.com/owncloud/core/pull/24351">owncloud/core#24351</a> <a class="reference external" href="https://github.com/owncloud/core/pull/24869">owncloud/core#24869</a> <a class="reference external" href="https://github.com/owncloud/core/pull/24405">owncloud/core#24405</a> <a class="reference external" href="https://github.com/owncloud/core/issues/24403">owncloud/core#24403</a></li>
+<li>Allow login by email <a class="reference external" href="https://github.com/owncloud/core/issues/24389">owncloud/core#24389</a></li>
+<li>Respect CLASS property in calendar events <a class="reference external" href="https://github.com/owncloud/core/issues/24080">owncloud/core#24080</a></li>
+<li>Allow addressbook export using VCFExportPlugin <a class="reference external" href="https://github.com/owncloud/core/issues/23893">owncloud/core#23893</a></li>
+<li>Birthdays are also generated based on shared addressbooks <a class="reference external" href="https://github.com/owncloud/core/issues/23510">owncloud/core#23510</a></li>
+</ul>
+</div>
+<div class="section" id="for-developers">
+<h3>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>New DAV endpoint with a new chunking protocol aiming to solve many issues like timeouts (not used by clients yet): <a class="reference external" href="https://github.com/owncloud/core/issues/20118">owncloud/core#20118</a></li>
+<li>New webdav property for share permissions <a class="reference external" href="https://github.com/owncloud/core/pull/22789">owncloud/core#22789</a></li>
+<li>Background repair steps can be specified info.xml <a class="reference external" href="https://github.com/owncloud/core/pull/24274">owncloud/core#24274</a></li>
+<li>Background jobs (cron) can now be declared in info.xml <a class="reference external" href="https://github.com/owncloud/core/pull/24392">owncloud/core#24392</a></li>
+<li>Apps can now define repair steps to run at install/uninstall time <a class="reference external" href="https://github.com/owncloud/core/pull/24322">owncloud/core#24322</a></li>
+<li>Export contact images via sabre dav plugin <a class="reference external" href="https://github.com/owncloud/core/pull/25081">owncloud/core#25081</a></li>
+<li>Sabre DAV&#8217;s browser plugin is available in debug mode to allow easier development around webdav <a class="reference external" href="https://github.com/owncloud/core/pull/23368">owncloud/core#23368</a></li>
+</ul>
+</div>
+<div class="section" id="technical-debt">
+<h3>Technical debt<a class="headerlink" href="#technical-debt" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>PSR-4 autoloading forced for <code class="docutils literal"><span class="pre">OC\</span></code> and <code class="docutils literal"><span class="pre">OCP\</span></code>, optional for <code class="docutils literal"><span class="pre">OCA\</span></code> <a class="reference external" href="https://github.com/owncloud/core/issues/13241">owncloud/core#13241</a> docs at <a class="reference external" href="https://docs.nextcloud.com/server/10/developer_manual/app/classloader.html">https://docs.nextcloud.com/server/10/developer_manual/app/classloader.html</a></li>
+<li>More cleanup of the sharing code (ongoing): <a class="reference external" href="https://github.com/owncloud/core/issues/22209">owncloud/core#22209</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+            
+<ul class="prevnext-title list-unstyled list-inline">
+  <li class="prev">
+    <a href="index.html" title="Previous Chapter: Nextcloud 10 Server Administration Manual Introduction"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Nextcloud 10 ...</span>
+    </a>
+  </li>
+  <li class="next">
+    <a href="installation/index.html" title="Next Chapter: Installation"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Installation &raquo;</span>
+    </a>
+  </li>
+</ul>
+					</div>
+				</div>
+			</div>
+  </main>  
+  </div>
+</div>
+  </body>
+</html>
